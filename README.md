@@ -1,6 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Implementation details
 
-## Getting Started
+I have set up the project structure using **`Next.js`** with **`TypeScript`** and **`Tailwind CSS`**, organizing the codebase into multiple folders for better maintainability.
+
+This project includes several common libraries: `redux`, `redux-toolkit`, `recharts`, `react-circular-progressbar`, `styled-components`, and `classnames`.
+
+The **`theme`** is managed through the **`tailwind.config.ts`** file, where colors can be customized as needed.
+
+For state management, mock data for articles and meal history is stored in the `Redux Store`.
+
+I have created a script in folter `scripts/generate-icons.js` that automatically generates component declarations from SVG files. This allows us to import and use them as React components effortlessly by following these two steps:
+  - Step 1: Copy the SVG icon into the `icons` folder.
+  - Step 2: Run the command: `node scripts/generate-icons.js` and then double-check the file `icons/index.ts` to see the result if you want.
+
+Additionally, I have implemented a simple Login page to demonstrate the Authentication and Authorization process. Currently, no tokens are stored.
+
+
+## Available scripts
 
 First, run the development server:
 
