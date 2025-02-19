@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import { Noto_Sans_JP, Inter } from "next/font/google";
+import Footer from "@/components/molecules/footer";
+import Header from "@/components/molecules/header";
 
 const notoSanJp = Noto_Sans_JP({
   variable: "--font-noto-san-jp"
+})
+
+const inter = Inter({
+  variable: "--font-inter"
 })
 
 export const metadata: Metadata = {
@@ -29,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${notoSanJp.variable} antialiased`}
+        className={`${notoSanJp.variable} ${inter.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

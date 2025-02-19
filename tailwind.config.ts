@@ -14,11 +14,14 @@ export default {
         'primary-500': '#EA6C00',
         'secondary-300': '#8FE9D0',
         'dark-300': '#2E2E2E',
-        'dark-400': '#777777',
         'dark-500': '#414141',
+        'gray-400': '#777777',
         'light': '#FFFFFF',
         'black': '#000000',
       },
+      fontFamily: {
+        Inter: ["Inter", "Inter Fallback"]
+      }
     },
   },
   plugins: [],

@@ -14,8 +14,8 @@ body {
 
 html, body {
   font-family: var(--font-noto-san-jp);
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.43;
   letter-spacing: 0.06px;
   color: #414141;
@@ -28,6 +28,12 @@ a {
 
 ul {
   list-style: none;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.43;
 }
 
 /* :root {
