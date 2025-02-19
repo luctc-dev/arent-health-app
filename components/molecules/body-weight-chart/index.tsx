@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import cls from "classnames";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid } from "recharts";
 import { useRef } from "react";
 import { useState } from "react";
@@ -20,7 +21,12 @@ const data = [
   { name: "5月", yellow: 40, aqua: 10 },
 ];
 
-const BodyWeightChart = () => {
+type Props = {
+  className?: string;
+  bgColor?: string;
+};
+
+const BodyWeightChart = ({ bgColor }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
 
@@ -44,7 +50,13 @@ const BodyWeightChart = () => {
   }, []);
 
   return (
-    <div className="text-center bg-dark-300 px-[30px] pt-3 pb-8 flex justify-center items-center" ref={ref}>
+    <div
+      className={cls(
+        bgColor || "bg-dark-300",
+        "text-center px-[30px] pt-3 pb-8 flex justify-center items-center"
+      )}
+      ref={ref}
+    >
       <LineChart
         width={width}
         height={300}
