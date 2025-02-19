@@ -3,6 +3,7 @@ import "./globals.css";
 import { Noto_Sans_JP, Inter } from "next/font/google";
 import Footer from "@/components/molecules/footer";
 import Header from "@/components/molecules/header";
+import StoreProvider from "@/store/store-provider";
 
 const notoSanJp = Noto_Sans_JP({
   variable: "--font-noto-san-jp"
@@ -27,9 +28,11 @@ export default function RootLayout({
       <body
         className={`${notoSanJp.variable} ${inter.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <StoreProvider>
+          <Header />
+          {children}
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );
