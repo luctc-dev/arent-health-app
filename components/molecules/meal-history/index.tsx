@@ -1,14 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import Button from "@/components/atoms/button";
 import Col from "@/components/atoms/col";
+import Row from "@/components/atoms/row";
+import Button from "@/components/atoms/button";
 import Container from "@/components/atoms/container";
 import MealHistoryItem from "../../atoms/meal-history-item";
-import Row from "@/components/atoms/row";
-import { RootState } from "@/store";
+import { useAppSelector } from "@/hooks/store";
 
 const MealHistory = () => {
-  const mealHistory = useSelector((state: RootState) => state.mealHistory);
+  const mealHistory = useAppSelector((state) => state.mealHistory);
 
   return (
     <div>

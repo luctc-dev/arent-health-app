@@ -7,9 +7,18 @@ export type MealItem = {
   type: string;
 }
 
+export type TypeArticleItem = {
+  id: number;
+  image: string;
+  title: string;
+  tags: string;
+  date: string;
+}
+
 type State = {
   isLogin: boolean
   mealHistory: MealItem[]
+  articles: TypeArticleItem[]
 }
 
 const randomId = () => {
@@ -27,6 +36,16 @@ const initState: State = {
     { id: randomId(), image: '/images/l03.jpg', label: '05.20.Lunch', type: 'lunch' },
     { id: randomId(), image: '/images/m03.jpg', label: '05.21.Lunch', type: 'lunch' },
     { id: randomId(), image: '/images/m01.jpg', label: '05.21.Morning', type: 'morning' },
+  ],
+  articles: [
+    { id: randomId(), image: '/images/column-1.jpg', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリべるメリべるメリ', date: '2021.05.17 23:25', tags: '#魚料理 #和食 #DHA' },
+    { id: randomId(), image: '/images/column-2.jpg', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリべるメリべるメリ', date: '2021.05.17 23:25', tags: '#魚料理 #和食 #DHA' },
+    { id: randomId(), image: '/images/column-3.jpg', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリべるメリべるメリ', date: '2021.05.17 23:25', tags: '#魚料理 #和食 #DHA' },
+    { id: randomId(), image: '/images/column-4.jpg', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリべるメリべるメリ', date: '2021.05.17 23:25', tags: '#魚料理 #和食 #DHA' },
+    { id: randomId(), image: '/images/column-5.jpg', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリべるメリべるメリ', date: '2021.05.17 23:25', tags: '#魚料理 #和食 #DHA' },
+    { id: randomId(), image: '/images/column-6.jpg', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリべるメリべるメリ', date: '2021.05.17 23:25', tags: '#魚料理 #和食 #DHA' },
+    { id: randomId(), image: '/images/column-7.jpg', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリべるメリべるメリ', date: '2021.05.17 23:25', tags: '#魚料理 #和食 #DHA' },
+    { id: randomId(), image: '/images/column-8.jpg', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリべるメリべるメリ', date: '2021.05.17 23:25', tags: '#魚料理 #和食 #DHA' },
   ]
 }
 
