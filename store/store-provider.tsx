@@ -12,6 +12,6 @@ export default function StoreProvider({
   if (!storeRef.current) {
     storeRef.current = makeStore()
   }
-
+  console.log('storeRef', storeRef.current?.getState())
   return <Provider store={storeRef.current}>{children}</Provider>
 }

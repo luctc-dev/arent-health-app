@@ -1,3 +1,5 @@
+"use client"
+import BackToTop from "@/components/atoms/back-to-top";
 import Container from "@/components/atoms/container";
 import Link from "next/link";
 
@@ -56,6 +58,7 @@ const Footer = () => {
           </li>
         </ul>
       </Container>
+      <BackToTop />
     </div>
   );
 };

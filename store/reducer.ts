@@ -1,4 +1,5 @@
 import { Reducer, AnyAction } from 'redux';
+import { ACT_SET_LOGIN } from './actions';
 
 export type MealItem = {
   id: number;
@@ -51,8 +52,12 @@ const initState: State = {
 
 
 export const rootReducer: Reducer<State, AnyAction> = (state = initState, action) => {
-  console.log(initState)
-  console.log(action)
+  if (action.type === ACT_SET_LOGIN) {
+    return {
+      ...state,
+      isLogin: action.payload
+    }
+  }
 
   return state; 
 }
